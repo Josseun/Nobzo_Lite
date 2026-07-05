@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #0f766e;
+  --color-secondary: #334155;
+  --color-tertiary: #f8fafc;
+  --color-neutral: #64748b;
+
+  --font-geist: "geist", sans-serif;
+}
+
+@font-face {
+  font-family: "geist";
+  src: url(/Geist/Geist-VariableFont_wght.ttf) format("truetype");
+}
+html,
+body {
+  width: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  margin: auto;
+  box-sizing: border-box;
+  font-family: var(--font-geist);
+}
+
+@utility flex-center {
+  @apply flex justify-center items-center;
+}
+
+@utility flex-center-col {
+  @apply flex flex-col gap-1 justify-center items-center;
+}
+
+@utility flex-justify {
+  @apply flex flex-col gap-1 justify-center;
+}
+
+@utility flex-between {
+  @apply flex justify-between items-center;
+}
