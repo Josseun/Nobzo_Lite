@@ -27,7 +27,6 @@ const SignInPage = () => {
       } else {
         sessionStorage.setItem("user", JSON.stringify(user));
       }
-      console.log("Logged in:", user);
       navigate("/");
     } catch (error) {
       console.error(error);
