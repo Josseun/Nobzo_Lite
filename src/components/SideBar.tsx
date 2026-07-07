@@ -45,7 +45,7 @@ function SideBar() {
           ))}
         </ul>
 
-<div className="flex-center w-full mt-5 block pl-10">
+<div className="flex-center w-full mt-5 max-lg:block hidden pl-10">
           <SignOutButton />
 
 </div>
