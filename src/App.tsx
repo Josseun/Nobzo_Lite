@@ -1,13 +1,9 @@
-import SignInPage from "./pages/SignInPage";
+// App.tsx
+import { RouterProvider } from "react-router";
+import { router } from "./router";
 
 function App() {
-  return (
-    <>
-      <main className="w-screen min-h-screen overflow-hidden">
-        <SignInPage />
-      </main>
-    </>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
