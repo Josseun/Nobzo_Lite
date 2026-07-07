@@ -1,6 +1,6 @@
 import { Icon } from "@iconify/react";
 import Button from "../components/Button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { login } from "../api/auth";
 import { useNavigate } from "react-router";
 
@@ -28,11 +28,20 @@ const SignInPage = () => {
         sessionStorage.setItem("user", JSON.stringify(user));
       }
       console.log("Logged in:", user);
-      navigate("/Explore");
+      navigate("/");
     } catch (error) {
       console.error(error);
     }
   };
+
+  useEffect(() => {
+    const storedUser =
+      localStorage.getItem("user") || sessionStorage.getItem("user");
+
+    if (storedUser) {
+      navigate("/", { replace: true });
+    }
+  }, [navigate]);
 
   return (
     <div className="flex-center-col bg-tertiary/50 w-screen min-h-screen my-10 overflow-hidden max-lg:px-10 max-lg:my-8">

@@ -38,3 +38,7 @@ body {
 @utility flex-between {
   @apply flex justify-between items-center;
 }
+
+@utility flex-gap {
+  @apply flex items-center gap-3;
+}

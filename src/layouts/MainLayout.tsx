@@ -9,12 +9,12 @@ const navLink = [
 export default function MainLayout() {
   return (
     <div>
-      <nav className="flex items-center justify-between shadow-sm mb-10 px-8 py-4">
+      <nav className="flex items-center justify-between shadow-sm px-8 py-4">
         <Link className="md:text-base text-sm" to="/">
           <h1 className="text-primary text-3xl font-bold">Nobzo Lite</h1>
         </Link>
 
-        <ul className="flex gap-6">
+        <ul className="flex gap-6 max-md:hidden">
           {navLink.map((nav) => (
             <li key={nav.path}>
               <NavLink
@@ -43,7 +43,7 @@ export default function MainLayout() {
           />
         </div>
 
-        <div className="flex items-center justify-center gap-10">
+        <div className="flex items-center justify-center gap-10 max-md:gap-5">
           <button className="p-3 w-40 rounded-sm text-lg font-semibold bg-primary text-tertiary max-lg:hidden">
             Post Listing
           </button>
@@ -54,7 +54,7 @@ export default function MainLayout() {
             icon="material-symbols:settings-outline"
           />
 
-          <Link to="/dashboard" className="size-8 rounded-full overflow-hidden">
+          <Link to="/dashboard/properties" className="size-8 rounded-full overflow-hidden">
             <img src="/images/profile.jpg" alt="profile" />
           </Link>
         </div>
