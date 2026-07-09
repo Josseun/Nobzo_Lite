@@ -10,7 +10,7 @@ export default function MainLayout() {
   return (
     <div>
       <nav className="flex items-center justify-between shadow-sm px-8 py-4">
-        <Link className="md:text-base text-sm" to="/">
+        <Link className="md:text-base text-sm" to="/" viewTransition>
           <h1 className="text-primary text-3xl font-bold">Nobzo Lite</h1>
         </Link>
 
@@ -18,6 +18,7 @@ export default function MainLayout() {
           {navLink.map((nav) => (
             <li key={nav.path}>
               <NavLink
+                viewTransition
                 to={nav.path}
                 className={({ isActive }) =>
                   isActive
@@ -54,7 +55,10 @@ export default function MainLayout() {
             icon="material-symbols:settings-outline"
           />
 
-          <Link to="/dashboard/properties" className="size-8 rounded-full overflow-hidden">
+          <Link
+            to="/dashboard/properties"
+            className="size-8 rounded-full overflow-hidden"
+          >
             <img src="/images/profile.jpg" alt="profile" />
           </Link>
         </div>

@@ -11,7 +11,7 @@ function SideBar() {
     <>
       <div className="pl-10 max-lg:pl-6 max-lg:pt-2 flex-between">
         <div>
-          <Link className="md:text-base text-sm " to="/">
+          <Link className="md:text-base text-sm " to="/" viewTransition>
             <h1 className="text-primary text-3xl font-bold">Nobzo Lite</h1>
           </Link>
           <p className="font-medium text-md">Admin console</p>
@@ -28,6 +28,7 @@ function SideBar() {
           {navLinks.map((nav) => (
             <li key={nav.label}>
               <NavLink
+                viewTransition
                 onClick={() => setDrawerOpen(false)}
                 className={({ isActive }) =>
                   `flex-gap pl-10 py-3 ${
@@ -45,10 +46,9 @@ function SideBar() {
           ))}
         </ul>
 
-<div className="flex-center w-full mt-5 max-lg:block hidden pl-10">
+        <div className="flex-center w-full mt-5 max-lg:block hidden pl-10">
           <SignOutButton />
-
-</div>
+        </div>
 
         <div className="flex-center flex-col h-full w-full pt-5 gap-5">
           <button className="text-xl flex-center bg-primary p-4 text-white font-semibold px-6 rounded-lg">
